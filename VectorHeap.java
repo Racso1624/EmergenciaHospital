@@ -109,6 +109,12 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 	}
 
 	@Override
+	public int compareTo(E o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
 	public E getFirst() {
 		return data.get(0);
 	}
@@ -127,6 +133,11 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 	@Override
 	public int size() {
 		return data.size();
+	}
+
+	@Override
+	public String toString() {
+		return data.toString();
 	}
 
 }

@@ -13,7 +13,7 @@ public class Paciente implements Comparable<Paciente> {
 
         char prioridadChar = prioridad.charAt(0);
         int prioridadAscii = (int)prioridadChar;
-        numeroPrioridad = prioridadAscii - 64;
+        this.numeroPrioridad = prioridadAscii - 64;
     }
 
     public String getNombre() {
@@ -35,6 +35,11 @@ public class Paciente implements Comparable<Paciente> {
     @Override
     public int compareTo(Paciente o) {
         return (this.numeroPrioridad - o.getNumeroPrioridad());
+    }
+
+    @Override
+    public String toString() {
+        return nombre + ", " + sintoma + ", " + prioridad;
     }
 
 }
