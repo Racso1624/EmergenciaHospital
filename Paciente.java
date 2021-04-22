@@ -12,8 +12,9 @@ public class Paciente implements Comparable<Paciente> {
         this.prioridad = prioridad;
 
         char prioridadChar = prioridad.charAt(0);
-        int prioridadAscii = (int)prioridadChar;
+        int prioridadAscii = (int)(prioridadChar);
         this.numeroPrioridad = prioridadAscii - 64;
+        System.out.println(numeroPrioridad);
     }
 
     public String getNombre() {

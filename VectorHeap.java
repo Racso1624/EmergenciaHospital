@@ -116,7 +116,7 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 
 	@Override
 	public E getFirst() {
-		return data.get(0);
+		return data.firstElement();
 	}
 
 	@Override
@@ -133,6 +133,23 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 	@Override
 	public int size() {
 		return data.size();
+	}
+
+	public void removeFirst(){
+		data.remove(getFirst());
+	}
+
+	public void imprimir(){
+		int numerociclo = size();
+		for(int i = 0; i < numerociclo; i++){
+			E primero = getFirst();
+			removeFirst();
+			if(size() != 0){
+				percolateUp(data.size()-1);
+				pushDownRoot(0);
+			}
+			System.out.println(primero.toString());
+		}
 	}
 
 	@Override

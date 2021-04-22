@@ -7,7 +7,6 @@
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 //Se crea la clase Main
@@ -22,7 +21,6 @@ public class Main {
     public static void main(String[] args) {
 
         //Se instancian las variables y clases
-        Scanner scanner = new Scanner(System.in);
         VectorHeap<Paciente> vectorHeap = new VectorHeap<Paciente>();
 
         //Se busca si existe el archivo
@@ -33,7 +31,7 @@ public class Main {
             while (myReader.hasNextLine()) {
                 //Se realiza un contador
                 String data = myReader.nextLine();//Se toma la linea de texto
-                String[] dataList = data.split(",");
+                String[] dataList = data.split(", ");
                 Paciente paciente = new Paciente(dataList[0], dataList[1], dataList[2]);
                 vectorHeap.add(paciente);
             }   
@@ -44,8 +42,8 @@ public class Main {
             System.exit(1);//Sale del programa
         }
 
-        System.out.println("\nBienvenido al Traductor");
+        System.out.println("\nBienvenido a la Emergencia del Hospital");
         	
-		System.out.println(vectorHeap.toString());
+		vectorHeap.imprimir();
     }
 }
