@@ -110,7 +110,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 
 	@Override
 	public int compareTo(E o) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
@@ -127,7 +126,7 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 
 	@Override
 	public boolean isEmpty() {
-		return false;
+		return data.isEmpty();
 	}
 
 	@Override
@@ -149,6 +148,13 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 				pushDownRoot(0);
 			}
 			System.out.println(primero.toString());
+		}
+	}
+
+	public void imprimirCorto(){
+		while(!isEmpty()){
+			E first = remove();
+			System.out.println(first);
 		}
 	}
 

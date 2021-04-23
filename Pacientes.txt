@@ -2,3 +2,8 @@ Juan Perez, fractura de pierna, C
 Maria Ramirez, apendicitis, A
 Lorenzo Toledo, chikunguya, E
 Carmen Sarmientos, dolores de parto, B
+Juan Antonio, dolor de pierna, E
+Juan Jose, dolor de cabeza, A
+Juan Jose, dolor de cabeza, C
+Juan Jose, dolor de cabeza, B
+Juan Jose, dolor de cabeza, D

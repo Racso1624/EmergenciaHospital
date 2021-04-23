@@ -44,6 +44,6 @@ public class Main {
 
         System.out.println("\nBienvenido a la Emergencia del Hospital");
         	
-		vectorHeap.imprimir();
+		vectorHeap.imprimirCorto();
     }
 }
