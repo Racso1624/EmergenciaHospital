@@ -17,17 +17,18 @@ public class Main {
     /** 
      * Pre:Se ingresan los archivos
      * @param args
-     * Post:Se regresa la traduccion
+     * Post:Se regresa la lista de los pacientes
      */
     //Se crea el Main
     public static void main(String[] args) {
 
-        //Se instancian las variables y clases
+        //Se crean instancias
         Scanner scanner = new Scanner(System.in);
 
+        //Se crea un ciclo para las opciones
         System.out.println("\nBienvenido a la Emergencia del Hospital");
         boolean var = false;
-        a: while(var == false){
+        a: while(var == false){//Se crea el ciclo
             System.out.println("\n\nIngrese la implementacion que desea que desea:");
             System.out.println("1) VectorHeap");
             System.out.println("2) PriorityQueue");
@@ -37,7 +38,7 @@ public class Main {
                 
                 int opcion = scanner.nextInt();//Se verifica el numero
 
-                if(opcion == 1){//Si VectorHeap
+                if(opcion == 1){//Si es VectorHeap
                     VectorHeap<Paciente> vectorHeap = new VectorHeap<Paciente>();
                     //Se busca si existe el archivo
                     try {
@@ -45,11 +46,10 @@ public class Main {
                         Scanner myReader = new Scanner(obj);
                         //Si existe se hace un ciclo
                         while (myReader.hasNextLine()) {
-                            //Se realiza un contador
                             String data = myReader.nextLine();//Se toma la linea de texto
-                            String[] dataList = data.split(", ");
+                            String[] dataList = data.split(", ");//Se separa
                             Paciente paciente = new Paciente(dataList[0], dataList[1], dataList[2]);
-                            vectorHeap.add(paciente);
+                            vectorHeap.add(paciente);//Se ingresan los datos como paciente
                         }   
                         myReader.close();
                     } catch (FileNotFoundException e) {
@@ -58,7 +58,7 @@ public class Main {
                         System.exit(1);//Sale del programa
                     }
                     boolean var2 = false;
-                    while(var2 == false){
+                    while(var2 == false){// Se crea el ciclo para imprimir pacientes
 
                         System.out.println("\n\nIngrese la implementacion que desea que desea:");
                         System.out.println("1) Siguiente Paciente");
@@ -68,19 +68,19 @@ public class Main {
                             
                             int opcion2 = scanner.nextInt();//Se verifica el numero
 
-                            if(opcion2 == 1){//Si VectorHeap
-                                if(!vectorHeap.isEmpty()){
-                                    System.out.println("\nEl siguiente paciente es: " + vectorHeap.remove());
+                            if(opcion2 == 1){//Si se requiere el paciente
+                                if(!vectorHeap.isEmpty()){//Se verifica que el vector tenga datos
+                                    System.out.println("\nEl siguiente paciente es: " + vectorHeap.remove());//Se imprime
                                 }
-                                else{
+                                else{//Si no, termina el programa
                                     System.out.println("\n\nLa lista de pacientes se ha terminado");
                                     System.out.println("Ya no quedan pacientes en espera");
                                     break a;
                                 }
                             }
-                            else if(opcion2 == 2){
+                            else if(opcion2 == 2){//Si se sale
                                 System.out.println("Saliendo del Programa");
-                                break a;
+                                break a;//Sale del programa
                             }
                             else{
                                 System.out.println("\nOpcion Incorrecta, Ingresela de Nuevo");
@@ -88,7 +88,7 @@ public class Main {
 
                         } catch (InputMismatchException e) {
                             System.out.println("\nOpcion Incorrecta, Ingresela de Nuevo");
-                            scanner.nextLine();
+                            scanner.nextLine();//Se toma de nuevo
                         }
                     }
                         
@@ -101,11 +101,10 @@ public class Main {
                         Scanner myReader = new Scanner(obj);
                         //Si existe se hace un ciclo
                         while (myReader.hasNextLine()) {
-                            //Se realiza un contador
                             String data = myReader.nextLine();//Se toma la linea de texto
-                            String[] dataList = data.split(", ");
+                            String[] dataList = data.split(", ");//Se separa
                             Paciente paciente = new Paciente(dataList[0], dataList[1], dataList[2]);
-                            priorityQueue.add(paciente);
+                            priorityQueue.add(paciente);//Se ingresa un nuevo paciente al queue
                         }   
                         myReader.close();
                     } catch (FileNotFoundException e) {
@@ -114,7 +113,7 @@ public class Main {
                         System.exit(1);//Sale del programa
                     }
                     boolean var2 = false;
-                    while(var2 == false){
+                    while(var2 == false){//Se revisa el ciclo para los pacientes
 
                         System.out.println("\n\nIngrese la implementacion que desea que desea:");
                         System.out.println("1) Siguiente Paciente");
@@ -124,17 +123,17 @@ public class Main {
                             
                             int opcion2 = scanner.nextInt();//Se verifica el numero
 
-                            if(opcion2 == 1){//Si VectorHeap
-                                if(!priorityQueue.isEmpty()){
-                                    System.out.println("\nEl siguiente paciente es: " + priorityQueue.poll());
+                            if(opcion2 == 1){//Si se requiere al paciente
+                                if(!priorityQueue.isEmpty()){//Se verifica que no este vacio
+                                    System.out.println("\nEl siguiente paciente es: " + priorityQueue.poll());//Se imprime 
                                 }
-                                else{
+                                else{//Si no hay nada, se termina programa
                                     System.out.println("\n\nLa lista de pacientes se ha terminado");
                                     System.out.println("Ya no quedan pacientes en espera");
                                     break a;
                                 }
                             }
-                            else if(opcion2 == 2){
+                            else if(opcion2 == 2){//Si no, se sale del programa
                                 System.out.println("Saliendo del Programa");
                                 break a;
                             }
@@ -149,7 +148,7 @@ public class Main {
                     }
                         
                 }
-                else if(opcion == 3){
+                else if(opcion == 3){//Se sale del programa
                     System.out.println("Saliendo del Programa");
                     var = true;//Se termina el ciclo principal
                 }
