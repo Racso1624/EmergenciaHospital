@@ -1,3 +1,9 @@
+/**
+ * Oscar Fernando López Barrios
+ * Carné 20679
+ * 
+ * Paciente
+ */
 //Se crea la clase Paciente
 public class Paciente implements Comparable<Paciente> {
     
@@ -12,11 +18,10 @@ public class Paciente implements Comparable<Paciente> {
         this.nombre = nombre;
         this.sintoma = sintoma;
         this.prioridad = prioridad;
-        //Se realiza la comversion de string a numero
-        char prioridadChar = prioridad.charAt(0);
-        int prioridadAscii = (int)(prioridadChar);
-        this.numeroPrioridad = prioridadAscii - 64;
-        System.out.println(numeroPrioridad);
+        
+        char prioridadChar = prioridad.charAt(0);//Se realiza la comversion de string a char
+        int prioridadAscii = (int)(prioridadChar);//Se convierte de char a int
+        this.numeroPrioridad = prioridadAscii - 64;//Se resta la cantidad de numeros del codigo Ascii
     }
 
     

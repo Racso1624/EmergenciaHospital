@@ -3,8 +3,8 @@ Maria Ramirez, apendicitis, A
 Lorenzo Toledo, chikunguya, E
 Carmen Sarmientos, dolores de parto, B
 Juan Antonio, dolor de pierna, D
-Juan Jose, dolor de rodilla, R
-Jose Pablo, dolor de estomago, Q
-Ricardo Jose, dolor de cabeza, S
-Juan Daniel, dolor de cuerpo, T
-Alejandro Gomez, dolor de corazon, G
+Juan Jose, dolor de rodilla, A
+Jose Pablo, dolor de estomago, C
+Ricardo Jose, dolor de cabeza, E
+Juan Daniel, dolor de cuerpo, D
+Alejandro Gomez, dolor de corazon, B

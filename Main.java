@@ -29,7 +29,7 @@ public class Main {
         System.out.println("\nBienvenido a la Emergencia del Hospital");
         boolean var = false;
         a: while(var == false){//Se crea el ciclo
-            System.out.println("\n\nIngrese la implementacion que desea que desea:");
+            System.out.println("\n\nIngrese la implementacion que desea:");
             System.out.println("1) VectorHeap");
             System.out.println("2) PriorityQueue");
             System.out.println("3) Salir\n");
@@ -60,7 +60,7 @@ public class Main {
                     boolean var2 = false;
                     while(var2 == false){// Se crea el ciclo para imprimir pacientes
 
-                        System.out.println("\n\nIngrese la implementacion que desea que desea:");
+                        System.out.println("\n\nIngrese la opcion que desea:");
                         System.out.println("1) Siguiente Paciente");
                         System.out.println("2) Salir\n");
 
@@ -115,7 +115,7 @@ public class Main {
                     boolean var2 = false;
                     while(var2 == false){//Se revisa el ciclo para los pacientes
 
-                        System.out.println("\n\nIngrese la implementacion que desea que desea:");
+                        System.out.println("\n\nIngrese la opcion que desea:");;
                         System.out.println("1) Siguiente Paciente");
                         System.out.println("2) Salir\n");
 
