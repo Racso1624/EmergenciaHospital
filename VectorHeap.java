@@ -138,19 +138,6 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 		data.remove(getFirst());
 	}
 
-	public void imprimir(){
-		int numerociclo = size();
-		for(int i = 0; i < numerociclo; i++){
-			E primero = getFirst();
-			removeFirst();
-			if(size() != 0){
-				percolateUp(data.size()-1);
-				pushDownRoot(0);
-			}
-			System.out.println(primero.toString());
-		}
-	}
-
 	public void imprimirCorto(){
 		while(!isEmpty()){
 			E first = remove();
